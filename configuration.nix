@@ -42,8 +42,11 @@ in {
   environment.systemPackages = with pkgs; [
     arandr
     bundler
-    bundler
     cargo
+    teamviewer
+    slack
+    discord
+    rustc
     chromium
     cmake
     ctags
@@ -65,6 +68,12 @@ in {
     openssh
     postgresql
     python35Packages.docker_compose
+    python
+    libjpeg
+    giflib
+    pkgconfig
+    cairo
+    pango
     awscli
     ripgrep
     ruby
@@ -120,6 +129,7 @@ in {
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+  services.teamviewer.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
